@@ -1,0 +1,6 @@
+extends:
+  - base
+  - es6
+
+parserOptions:
+  sourceType: module

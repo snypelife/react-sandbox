@@ -1,0 +1,47 @@
+{
+  "name": "react-sandbox",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "engines": {
+    "node": ">=4.2",
+    "npm": ">=2.12"
+  },
+  "scripts": {
+    "clean": "rimraf coverage",
+    "cov": "opener coverage/lcov-report/index.html",
+    "cov-check": "istanbul report && istanbul check-coverage",
+    "lint": "eslint --ignore-path .gitignore .",
+    "test": "npm run clean && npm run test-cov && npm run lint && npm run cov-check",
+    "test-cov": "istanbul cover --include-pid _mocha -- --recursive --reporter spec",
+    "watch-test": "mocha --recursive -w"
+  },
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snypelife/react-sandbox.git"
+  },
+  "homepage": "https://github.com/snypelife/react-sandbox",
+  "bugs": {
+    "url": "https://github.com/snypelife/react-sandbox/issues"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.0.0",
+    "eslint-config-base": "github:snypelife/eslint-config-base",
+    "eslint-config-es6": "github:snypelife/eslint-config-es6",
+    "istanbul": "^1.1.0-alpha.1",
+    "mocha": "^2.5.3",
+    "mocha-teamcity-reporter": "^1.0.0",
+    "opener": "^1.4.1",
+    "reggie": "^0.2.1",
+    "rimraf": "^2.5.3"
+  },
+  "dependencies": {
+    "react": "^15.2.0",
+    "react-addons-test-utils": "^15.2.0",
+    "react-dom": "^15.2.0",
+    "sinon": "^1.17.4"
+  }
+}
