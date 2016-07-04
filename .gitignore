@@ -4,8 +4,5 @@
 **/.vscode/**
 .idea/
 
-.terraform
-terraform.tfvars
-terraform.tfstate.backup
 **/.DS_Store
 
